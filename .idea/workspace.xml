@@ -10,15 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22841155-b641-4641-a57e-584c5b99da1b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Views/bibliotecarioVista.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Views/usuarioVista.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controlador/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/modelo/CatalogoLibros.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/modelo/CatalogoLibros.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/modelo/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/modelo/Libro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/modelo/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modelo/Libro.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>

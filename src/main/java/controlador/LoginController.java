@@ -20,9 +20,9 @@ public class LoginController extends HttpServlet {
         if (usuario.equals(contrasena)) {
 
             if (esUsuario(usuario)) {
-                response.sendRedirect("usuarioVista.jsp");
+                response.sendRedirect("Views/usuarioVista.jsp");
             } else if (esBibliotecario(usuario)) {
-                response.sendRedirect("bibliotecarioVista.jsp");
+                response.sendRedirect("Views/bibliotecarioVista.jsp");
             } else {
 
                 response.getWriter().println("Usuario no válido");
