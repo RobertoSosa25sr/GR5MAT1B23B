@@ -15,7 +15,7 @@
   <div class="col-md-6 offset-md-3">
     <h2 class="text-center">Inicio de Sesión</h2>
 
-    <form action="LoginController" method="post">
+    <form action="login-controller" method="post">
       <div class="form-group">
         <label for="usuario">Usuario:</label>
         <input type="text" class="form-control" id="usuario" name="usuario" required>
