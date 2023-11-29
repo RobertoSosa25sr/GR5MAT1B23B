@@ -1,7 +1,2 @@
-public class Main {
-
-    public static void main(String [] ars){
-        System.out.println("Main");
-    }
-
+package PACKAGE_NAME;public class Main {
 }

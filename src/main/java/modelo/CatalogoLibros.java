@@ -1,5 +1,2 @@
-package modelo;
-
-public class CatalogoLibros {
-
+package modelo;public class CatalogoLibros {
 }
