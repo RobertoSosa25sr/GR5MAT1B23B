@@ -10,10 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22841155-b641-4641-a57e-584c5b99da1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Views/bibliotecarioVista.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Views/usuarioVista.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controlador/LibroController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controlador/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Views/bibliotecarioVista.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Views/bibliotecarioVista.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Views/usuarioVista.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Views/usuarioVista.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/modelo/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/modelo/Libro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controlador/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controlador/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/modelo/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modelo/Libro.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,7 +72,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4

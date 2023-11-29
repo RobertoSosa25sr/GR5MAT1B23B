@@ -17,7 +17,6 @@ public class LoginController extends HttpServlet {
         String contrasena = request.getParameter("contrasena");
 
         //TODO Método de verificación
-        if (usuario.equals(contrasena)) {
 
             if (esUsuario(usuario)) {
                 response.sendRedirect("Views/usuarioVista.jsp");
@@ -25,24 +24,16 @@ public class LoginController extends HttpServlet {
                 response.sendRedirect("Views/bibliotecarioVista.jsp");
             } else {
 
-                response.getWriter().println("Usuario no válido");
+                response.sendRedirect("index.jsp");
             }
-        } else {
-
-            response.getWriter().println("Credenciales incorrectas");
-        }
     }
 
     private boolean esUsuario(String usuario) {
-        // Implementar lógica para verificar si el usuario es un usuario normal
-        // Devolver true si es un usuario, false de lo contrario
-        return true; // Cambiar según tus requisitos
+        return usuario.equals("usuario");
     }
 
     private boolean esBibliotecario(String usuario) {
-        // Implementar lógica para verificar si el usuario es un bibliotecario
-        // Devolver true si es un bibliotecario, false de lo contrario
-        return false; // Cambiar según tus requisitos
+        return usuario.equals("bibliotecario");
     }
 }
 
