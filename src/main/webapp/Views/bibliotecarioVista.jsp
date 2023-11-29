@@ -10,6 +10,12 @@
         body {
             padding: 20px;
         }
+
+        .exit-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -38,7 +44,7 @@
             <td><%= libro.getAutor() %></td>
             <td><%= libro.getGenero() %></td>
             <td><%= libro.getIsbn() %></td>
-            <td><%= libro.isDisponible() ? "Sí" : "No" %></td>
+            <td><%= libro.isDisponible() ? "disponible" : "prestado" %></td>
         </tr>
         <% } %>
         </tbody>
@@ -103,6 +109,8 @@
         </div>
     </div>
 </div>
+
+<a href="/index.jsp" class="btn btn-primary exit-button">Salir</a>
 
 </body>
 </html>

@@ -2,6 +2,7 @@ package controlador;
 
 import jakarta.servlet.annotation.WebServlet;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.servlet.http.*;
@@ -19,20 +20,28 @@ public class LoginController extends HttpServlet {
         String usuario = request.getParameter("usuario");
         String contrasena = request.getParameter("contrasena");
 
+        HttpSession session = request.getSession();
+
+        // Verificar si ya hay una sesión activa
+        if (session.getAttribute("listaLibros") == null) {
+            CatalogoLibros catalogoLibros = new CatalogoLibros();
+            List<Libro> listaLibros = catalogoLibros.getListaLibros();
+
+            List<Libro> listaLibrosUsuario = new ArrayList<>();
+
+            session.setAttribute("listaLibros", listaLibros);
+            session.setAttribute("listaLibrosUsuario", listaLibrosUsuario);
+        }
+
         //TODO Método de verificación
 
-            if (esUsuario(usuario)) {
-                response.sendRedirect("Views/usuarioVista.jsp");
-            } else if (esBibliotecario(usuario)) {
-                CatalogoLibros catalogoLibros = new CatalogoLibros();
-                List<Libro> listaLibros = catalogoLibros.getListaLibros();
-                HttpSession session = request.getSession();
-                session.setAttribute("listaLibros", listaLibros);
-                response.sendRedirect("Views/bibliotecarioVista.jsp");
-            } else {
-
-                response.sendRedirect("index.jsp");
-            }
+        if (esUsuario(usuario)) {
+            response.sendRedirect("Views/usuarioVista.jsp");
+        } else if (esBibliotecario(usuario)) {
+            response.sendRedirect("Views/bibliotecarioVista.jsp");
+        } else {
+            response.sendRedirect("index.jsp");
+        }
     }
 
     private boolean esUsuario(String usuario) {
