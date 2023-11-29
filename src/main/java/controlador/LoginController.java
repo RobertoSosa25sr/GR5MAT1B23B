@@ -1,9 +1,12 @@
 package controlador;
 
 import jakarta.servlet.annotation.WebServlet;
-
 import java.io.*;
+import java.util.List;
+
 import jakarta.servlet.http.*;
+import modelo.CatalogoLibros;
+import modelo.Libro;
 
 
 @WebServlet(name = "LoginController", value = "/login-controller")
@@ -21,6 +24,10 @@ public class LoginController extends HttpServlet {
             if (esUsuario(usuario)) {
                 response.sendRedirect("Views/usuarioVista.jsp");
             } else if (esBibliotecario(usuario)) {
+                CatalogoLibros catalogoLibros = new CatalogoLibros();
+                List<Libro> listaLibros = catalogoLibros.getListaLibros();
+                HttpSession session = request.getSession();
+                session.setAttribute("listaLibros", listaLibros);
                 response.sendRedirect("Views/bibliotecarioVista.jsp");
             } else {
 

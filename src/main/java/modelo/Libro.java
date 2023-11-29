@@ -40,7 +40,9 @@ public class Libro {
     public String getIsbn() {
         return isbn;
     }
-
+    public boolean isDisponible() {
+        return disponibilidad;
+    }
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
@@ -58,7 +60,8 @@ public class Libro {
         this.isbn = isbn;
     }
 
-    public boolean isDisponible() {
-        return disponibilidad;
-    }
+    public void setDisponible(boolean isDisponible){this.disponibilidad = isDisponible;}
+
+
+
 }

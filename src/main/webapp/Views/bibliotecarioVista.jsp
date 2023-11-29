@@ -1,55 +1,108 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
 <%@ page import="modelo.Libro" %>
-<%@ page import="modelo.CatalogoLibros" %>
-<%@ page import="java.util.ArrayList" %>
 <html>
 <head>
     <title>Bibliotecario</title>
+    <!-- Agregar la referencia a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Catálogo de Libros</h2>
+<div class="container">
+    <h2 class="mt-3">Catálogo de Libros</h2>
 
-<%-- Mostrar la lista actual de libros --%>
-<table border="1">
-    <tr>
-        <th>Titulo</th>
-        <th>Autor</th>
-        <th>Género</th>
-        <th>ISBN</th>
-        <th>Disponible</th>
-    </tr>
-    <% CatalogoLibros catalogo = new CatalogoLibros();
-        List<Libro> libros = catalogo.getListaLibros();
-        for (Libro libro : libros) { %>
-    <tr>
-        <td><%= libro.getTitulo() %></td>
-        <td><%= libro.getAutor() %></td>
-        <td><%= libro.getGenero() %></td>
-        <td><%= libro.getIsbn() %></td>
-        <td><%= libro.isDisponible() ? "Sí" : "No" %></td>
-    </tr>
+    <%
+        List<Libro> listaLibros = (List<Libro>) session.getAttribute("listaLibros");
+
+        if (listaLibros != null && !listaLibros.isEmpty()) { %>
+    <table class="table mt-3">
+        <thead>
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Género</th>
+            <th>ISBN</th>
+            <th>Disponible</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (Libro libro : listaLibros) { %>
+        <tr>
+            <td><%= libro.getTitulo() %></td>
+            <td><%= libro.getAutor() %></td>
+            <td><%= libro.getGenero() %></td>
+            <td><%= libro.getIsbn() %></td>
+            <td><%= libro.isDisponible() ? "Sí" : "No" %></td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <% } else { %>
+    <p class="mt-3">No se encontraron libros</p>
     <% } %>
-</table>
 
-<%-- Formulario para agregar libro --%>
-<h3>Agregar Libro</h3>
-<form action="/libro-controller" method="post">
-    <label for="titulo">Título:</label>
-    <input type="text" id="titulo" name="titulo" required><br>
-    <label for="autor">Autor:</label>
-    <input type="text" id="autor" name="autor" required><br>
-    <label for="genero">Género:</label>
-    <input type="text" id = "genero" name="genero" required><br>
-    <label for="isbn">ISBN:</label>
-    <input type="text" id = "isbn" name="isbn" required><br>
-    <label for="disponible">Disponible:</label>
-    <input type="checkbox" id = "disponible" name="disponible"><br>
-    <input type="submit" value="Agregar Libro">
-</form>
+    <div class="mt-3">
+        <a class="btn btn-success" href="agregarLibroVista.jsp">Agregar</a>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editarLibroModal">Editar</button>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#eliminarLibroModal">Eliminar</button>
+    </div>
+</div>
 
-<%-- Otros formularios para editar y eliminar libros --%>
+<!-- Agregar la referencia a Bootstrap JS y jQuery (opcional, pero necesario para algunos componentes de Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Modals para Editar y Eliminar -->
+<div class="modal fade" id="editarLibroModal" tabindex="-1" role="dialog" aria-labelledby="editarLibroModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarLibroModalLabel">Editar Libro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/editarLibro-controller" method="get">
+                    <div class="form-group">
+                        <label for="isbnEditar">ISBN:</label>
+                        <input type="text" class="form-control" id="isbnEditar" name="isbn" placeholder="Ingrese el ISBN" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Editar Libro</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="eliminarLibroModal" tabindex="-1" role="dialog" aria-labelledby="eliminarLibroModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eliminarLibroModalLabel">Eliminar Libro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/eliminarLibro-controller" method="post">
+                    <div class="form-group">
+                        <label for="isbnEliminar">ISBN:</label>
+                        <input type="text" class="form-control" id="isbnEliminar" name="isbn" placeholder="Ingrese el ISBN" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Eliminar Libro</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
