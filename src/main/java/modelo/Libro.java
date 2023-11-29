@@ -1,2 +1,5 @@
-package modelo;public class Libro {
+package modelo;
+
+public class Libro {
+
 }
