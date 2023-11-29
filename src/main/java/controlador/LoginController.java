@@ -14,23 +14,22 @@ public class LoginController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        // Obtener los parámetros del formulario
         String usuario = request.getParameter("usuario");
         String contrasena = request.getParameter("contrasena");
 
-        // Verificar si el usuario y la contraseña son iguales
+        //TODO Método de verificación
         if (usuario.equals(contrasena)) {
-            // Dependiendo del tipo de usuario, redireccionar a la vista correspondiente
+
             if (esUsuario(usuario)) {
                 response.sendRedirect("usuarioVista.jsp");
             } else if (esBibliotecario(usuario)) {
                 response.sendRedirect("bibliotecarioVista.jsp");
             } else {
-                // Manejar el caso en el que el usuario no sea ni usuario ni bibliotecario
+
                 response.getWriter().println("Usuario no válido");
             }
         } else {
-            // Manejar el caso en el que el usuario y la contraseña no coincidan
+
             response.getWriter().println("Credenciales incorrectas");
         }
     }
