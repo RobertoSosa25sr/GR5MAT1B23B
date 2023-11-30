@@ -6,7 +6,7 @@
 
   <groupId>com.grupo5</groupId>
   <artifactId>GR5MAT1B23B</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>GR5MAT1B23B</name>
   <packaging>war</packaging>
 
