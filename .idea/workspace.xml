@@ -9,20 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22841155-b641-4641-a57e-584c5b99da1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/modelo/CatalogoLibros.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/classes/modelo/Libro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GR5MAT1B23B-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
-    </list>
+    <list default="true" id="22841155-b641-4641-a57e-584c5b99da1b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -218,7 +205,7 @@
       <workItem from="1701270200367" duration="986000" />
       <workItem from="1701271366693" duration="2486000" />
       <workItem from="1701278721235" duration="702000" />
-      <workItem from="1701310763987" duration="2441000" />
+      <workItem from="1701310763987" duration="2888000" />
     </task>
     <task id="LOCAL-00001" summary="fixup! Clase Libro y CatalogoLibros">
       <option name="closed" value="true" />
