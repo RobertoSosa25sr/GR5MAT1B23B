@@ -17,12 +17,13 @@ public class AlquilarLibroControlador extends HttpServlet {
 
         // Obtener la lista actual de libros de la sesión
         List<Libro> listaLibros = (List<Libro>) req.getSession().getAttribute("listaLibros");
-
+        List<Libro> listaLibrosUsuario = (List<Libro>) req.getSession().getAttribute("listaLibrosUsuario");
         // Buscar el libro por ISBN y actualizar la disponibilidad
         if (listaLibros != null && !listaLibros.isEmpty()) {
             for (Libro libro : listaLibros) {
                 if (libro.getIsbn().equals(isbn)) {
                     libro.setDisponible(false);
+                    listaLibrosUsuario.add(libro);
                     break;
                 }
             }
@@ -30,6 +31,7 @@ public class AlquilarLibroControlador extends HttpServlet {
 
         // Actualizar la lista de libros en la sesión
         req.getSession().setAttribute("listaLibros", listaLibros);
+        req.getSession().setAttribute("listaLibrosUsuario", listaLibrosUsuario);
         resp.sendRedirect("/Views/usuarioVista.jsp");
     }
 }
