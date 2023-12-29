@@ -9,7 +9,7 @@ pipeline{
                     echo "Test no disponible"
                     script {
                                         // Utiliza 'tool' para especificar la versión de Maven a utilizar
-                                        def mavenHome = tool name: 'Maven', type: 'maven'
+                                        def mavenHome = tool name: 'mv', type: 'maven'
                                         sh "${mavenHome}/bin/mvn clean compile"
                                     }
                 }

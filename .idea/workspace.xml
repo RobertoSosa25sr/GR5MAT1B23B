@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22841155-b641-4641-a57e-584c5b99da1b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-    </list>
+    <list default="true" id="22841155-b641-4641-a57e-584c5b99da1b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,7 +220,7 @@
       <workItem from="1701278721235" duration="702000" />
       <workItem from="1701310763987" duration="3503000" />
       <workItem from="1702998857074" duration="8597000" />
-      <workItem from="1703785045149" duration="14903000" />
+      <workItem from="1703785045149" duration="15005000" />
     </task>
     <task id="LOCAL-00001" summary="fixup! Clase Libro y CatalogoLibros">
       <option name="closed" value="true" />
