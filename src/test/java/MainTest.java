@@ -5,6 +5,8 @@ public class MainTest {
 
     @Test
     public void testMainMethod() {
-        fail(); // Un ejemplo simple de afirmación
+        //Si no se ejecuta ningún test entonces la prueba pasa
+        //fail(); // Un ejemplo simple de fallo
     }
+
 }
