@@ -10,7 +10,7 @@ pipeline{
                     script {
                                         // Utiliza 'tool' para especificar la versión de Maven a utilizar
                                         def mavenHome = tool name: 'mv', type: 'maven'
-                                        sh "${mavenHome}/bin/mvn clean compile"
+                                        sh "${mavenHome}/bin/mvn clean test"
                                     }
                 }
             }
