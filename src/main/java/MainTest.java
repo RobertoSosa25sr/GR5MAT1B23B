@@ -1,7 +1,5 @@
-import org.testng.annotations.Test;
-import static junit.framework.Assert.assertTrue;
-import static junit.framework.Assert.fail;
-
+import static org.junit.Assert.fail;
+import org.junit.Test;
 public class MainTest {
 
     @Test
